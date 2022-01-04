@@ -13,10 +13,6 @@ public class StudentService {
 	@Autowired
 	StudentRepository studentRepository;
 
-	
-	List<Student> students = new ArrayList<>(Arrays.asList(new Student("CS101", "Naveen Kumar S", "CSE"),
-			new Student("CS102", "Jagan J", "CSE"), new Student("CS103", "Biju B", "CSE")));
-
 	public List<Student> getAllDetails() {
 		List<Student> list = new ArrayList<>();
 		studentRepository.findAll().forEach(list :: add);
